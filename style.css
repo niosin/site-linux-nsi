@@ -1,0 +1,186 @@
+/* Body general */
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Body de l'accueil */
+body.accueil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("../images/archtrueadam.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Body des autres pages */
+body.page {
+  box-sizing: border-box;
+  background-image: url("../images/mine.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.conteneur {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 1100px;
+    line-height: 1.7;
+    border: gold;
+    display: flex;
+    gap: 30px;
+}
+
+.colonne {
+    flex: 1;
+}
+
+/* Tux le pinguoin de Linux */
+.pingouin {
+  width: 200px;
+  display: block;
+  animation: turn 5s linear infinite;
+  position: absolute;
+}
+
+/* Son animation */
+@keyframes turn {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Le titre */
+h1 {
+  margin: 0 0 20px 0;
+  color: bisque;
+  text-shadow: 2px 2px 8px black;
+  font-size: 3rem;
+}
+
+/* Sous-titres de toutes les pages */
+p {
+  color: bisque;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 8px black;
+  margin: 0 0 25px 0;
+}
+
+/* Texte 2 page histoire */
+.colonne h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: bisque;
+    text-shadow: 2px 2px 8px black;
+    margin: 0 0 25px 0;
+}
+
+/* Pour la page distributions */
+.liste-commandes li {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    margin-bottom: 14px;
+    color: bisque;
+    font-size: 1.1rem;
+}
+
+.liste-commandes b {
+    background-color: rgba(255, 215, 0, 0.12);
+    color: gold;
+    padding: 3px 10px;
+    border-radius: 4px;
+    border: 1px solid gold;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+}
+
+.liste-commandes li > b {
+    min-width: 80px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* Sous-titre de l'accueil seulement */
+.accueil p {
+  font-size: 3rem;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Le menu */
+.menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.menu a {
+  color: gold;
+  text-decoration: none;
+  padding: 8px 14px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.menu a:hover,
+.precedent:hover,
+.suivant:hover {
+  background-color: lightblue;
+}
+
+/* Navigation des pages */
+.precedent {
+  font-size: 1.8rem;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  color: gold;
+  text-decoration: none;
+  padding: 8px 14px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.suivant {
+  font-size: 1.8rem;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: gold;
+  text-decoration: none;
+  padding: 8px 14px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+/* Animation de "Cliquez pour afficher le texte" */
+#message {
+    font-size: 2rem;
+    background-color: rgba(243, 128, 128, 0.5);
+    text-align: center;
+}
+
+/* Animation du texte histoire */
+.cache {
+  display: none;
+}
